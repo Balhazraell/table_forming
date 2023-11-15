@@ -1,6 +1,7 @@
-from django.db import models
-from uuid import uuid4
 from datetime import datetime
+from uuid import uuid4
+
+from django.db import models
 
 
 class ProductsModel(models.Model):
@@ -12,13 +13,8 @@ class ProductsModel(models.Model):
 
     @property
     def orders_prev_month(self) -> int:
-        return self.cash_book.filter(
-            sale_date__month=datetime.now().month-1
-        ).count()
-    
+        return self.cash_book.filter(sale_date__month=datetime.now().month - 1).count()
+
     @property
     def orders_cur_month(self) -> int:
-        return self.cash_book.filter(
-            sale_date__month=datetime.now().month
-        ).count()
- 
+        return self.cash_book.filter(sale_date__month=datetime.now().month).count()

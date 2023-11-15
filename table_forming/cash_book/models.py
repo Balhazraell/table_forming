@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class CashBookModel(models.Model):
     product = models.ForeignKey(to="products.ProductsModel", related_name="cash_book", on_delete=models.CASCADE)
