@@ -16,6 +16,8 @@ Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings
 ### Start Up
 
 - docker-compose -f local.yml up -d
+- superuser login: alex@skypro.com
+- superuser pass: 123
 
 ### Setting Up Your Users
 
