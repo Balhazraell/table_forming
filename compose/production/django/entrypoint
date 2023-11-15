@@ -43,6 +43,4 @@ END
 
 >&2 echo 'PostgreSQL is available'
 
-python ./manage.py loaddata ./fixture.json
-
 exec "$@"
